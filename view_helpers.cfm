@@ -1,6 +1,7 @@
 <cfscript>
-  private string function render(required string view_path){
+  private string function render(required string view_path, struct locals={}){
     var loc = {};
+    var locals = arguments.locals;
     loc.html = '';
     loc.view_file_path = "/views/#arguments.view_path#.cfm";
 
