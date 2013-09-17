@@ -8,9 +8,9 @@
     if(fileExists(loc.view_file_path)){
       savecontent variable="loc.html" { include loc.view_file_path; }
     }else{
-      throw(type="ViewNotFound", message="View was unable to be found.");
+      throw(type="ViewNotFound", message="View was unable to be found. (#loc.view_file_path#)");
     }
-    
+
     return loc.html;
   }
 
@@ -21,9 +21,9 @@
     try{
       loc.json = serializeJSON(arguments.obj)
     }catch(Exception e){
-      
+
     }
-    
+
     return loc.json;
   }
 </cfscript>
