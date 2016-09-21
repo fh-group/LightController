@@ -1,5 +1,5 @@
 <cfscript>
-  private string function render(required string view_path, struct locals={}){
+  private string function renderView(required string view_path, struct locals={}){
     var loc = {};
     var locals = arguments.locals;
     loc.html = '';
